@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace VacinneRegister.Core.Entities
+﻿namespace VacinneRegister.Core.Entities
 {
     public class BaseClass
     {

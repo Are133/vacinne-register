@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace VacinneRegister.Core.Entities
 {
@@ -20,7 +19,7 @@ namespace VacinneRegister.Core.Entities
         public byte[] PasswordHash { get; set; }
 
         public byte[] PasswordSalt { get; set; }
-        
+
         public IEnumerable<Vacinne> VacinnesRegisterForThisUser { get; }
     }
 }
