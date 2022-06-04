@@ -58,7 +58,7 @@ namespace VacinneRegister.API.Controllers
 
             if (response == "nuser")
             {
-                return BadRequest("user incorrect");
+                return BadRequest("CredentialsIncorrect");
             }
             if (response == "CredentialsIncorrect")
             {

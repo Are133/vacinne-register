@@ -10,6 +10,10 @@ namespace VacinnerRegister.Infraestructure.Mappings
         {
             CreateMap<User, UserDTo>();
             CreateMap<UserDTo, User>();
+            CreateMap<Vacinne, VacinneDTo>();
+            CreateMap<VacinneDTo, Vacinne>();
+            CreateMap<Municipality, MunicipalityDTo>();
+            CreateMap<MunicipalityDTo, Municipality>();
         }
     }
 }

@@ -13,7 +13,5 @@ namespace VacinneRegister.Core.Entities
         public IEnumerable<Vacinne> Vacinnes { get; }
 
         public Municipality Municipality { get; set; }
-
-
     }
 }

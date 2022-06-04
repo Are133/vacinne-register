@@ -7,6 +7,7 @@ using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using VacinneRegister.Core.DTOs;
 using VacinneRegister.Core.Entities;
 using VacinneRegister.Core.Interfaces;
 using VacinnerRegister.Infraestructure.Data;
@@ -23,6 +24,7 @@ namespace VacinnerRegister.Infraestructure.Repositories
         {
             _dataContext = dataContext;
             _configuration = configuration;
+
         }
         public async Task<string> Login(string email, string password)
         {
@@ -50,24 +52,33 @@ namespace VacinnerRegister.Infraestructure.Repositories
             {
                 return -1;
             }
-            CreatePasswordHash(password, out byte[] passwordHash, out byte[] passwordSalt);
-            user.PasswordHash = passwordHash;
-            user.PasswordSalt = passwordSalt;
-
-            var userToDB = new User
+            try
             {
-                IdUser = GenerateKeyUser(),
-                Name = user.Name,
-                LastName = user.LastName,
-                Email = user.Email,
-                Telefono = user.Telefono,
-                Edad = user.Edad,
-                PasswordHash = passwordHash,
-                PasswordSalt = passwordSalt
-            };
-            await _dataContext.Users.AddAsync(userToDB);
-            await _dataContext.SaveChangesAsync();
-            return userToDB.Id;
+                CreatePasswordHash(password, out byte[] passwordHash, out byte[] passwordSalt);
+                user.PasswordHash = passwordHash;
+                user.PasswordSalt = passwordSalt;
+
+                var userToDB = new User
+                {
+                    IdUser = GenerateKeyUser().Trim(),
+                    Name = user.Name,
+                    LastName = user.LastName,
+                    Email = user.Email,
+                    Telefono = user.Telefono,
+                    Edad = user.Edad,
+                    PasswordHash = passwordHash,
+                    PasswordSalt = passwordSalt
+                };
+                await _dataContext.Users.AddAsync(userToDB);
+                await _dataContext.SaveChangesAsync();
+                return userToDB.Id;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            
         }
 
         public async Task<bool> UserExist(string email)
