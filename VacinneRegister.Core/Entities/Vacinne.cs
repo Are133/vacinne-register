@@ -8,6 +8,6 @@ namespace VacinneRegister.Core.Entities
 
         public DateTime ApplicationDate { get; set; }
 
-        public Municipality Municipality { get; set; }
+        public int MunicipalityId { get; set; }
     }
 }

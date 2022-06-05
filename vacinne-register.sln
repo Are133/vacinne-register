@@ -3,17 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32413.511
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VacinneRegister.API", "VacinneRegister.API\VacinneRegister.API.csproj", "{540B818D-48CE-441B-A3D2-AF55606A4909}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VacinneRegister.API", "VacinneRegister.API\VacinneRegister.API.csproj", "{540B818D-48CE-441B-A3D2-AF55606A4909}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VacinneRegister.Core", "VacinneRegister.Core\VacinneRegister.Core.csproj", "{112183D7-2683-4BA5-B389-273D22B7455D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VacinneRegister.Core", "VacinneRegister.Core\VacinneRegister.Core.csproj", "{112183D7-2683-4BA5-B389-273D22B7455D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VacinnerRegister.Infraestructure", "VacinnerRegister.Infraestructure\VacinnerRegister.Infraestructure.csproj", "{4966EB02-35FA-471A-B311-3F2E16365D4C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VacinnerRegister.Infraestructure", "VacinnerRegister.Infraestructure\VacinnerRegister.Infraestructure.csproj", "{4966EB02-35FA-471A-B311-3F2E16365D4C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{77324B25-3D1C-4EA4-ADD0-5CFF05E2446E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VacinneRegister.UnitTest", "VacinneRegister.UnitTest\VacinneRegister.UnitTest.csproj", "{825FE501-EB09-4909-945C-0598F914D4FD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VacinneRegister.UnitTest", "VacinneRegister.UnitTest\VacinneRegister.UnitTest.csproj", "{825FE501-EB09-4909-945C-0598F914D4FD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VacinneRegister.IntegrationTests", "VacinneRegister.IntegrationTests\VacinneRegister.IntegrationTests.csproj", "{0F656503-AA7F-4E70-A368-BE8F5D6B81D4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VacinneRegister.IntegrationTests", "VacinneRegister.IntegrationTests\VacinneRegister.IntegrationTests.csproj", "{0F656503-AA7F-4E70-A368-BE8F5D6B81D4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

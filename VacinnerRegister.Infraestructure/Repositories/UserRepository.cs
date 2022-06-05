@@ -69,6 +69,7 @@ namespace VacinnerRegister.Infraestructure.Repositories
                     PasswordHash = passwordHash,
                     PasswordSalt = passwordSalt
                 };
+                CreateToken(userToDB);
                 await _dataContext.Users.AddAsync(userToDB);
                 await _dataContext.SaveChangesAsync();
                 return userToDB.Id;
@@ -155,6 +156,22 @@ namespace VacinnerRegister.Infraestructure.Repositories
             var tokenHandler = new JwtSecurityTokenHandler();
             var token = tokenHandler.CreateToken(tokenDescriptor);
             return tokenHandler.WriteToken(token);
+        }
+
+        public async Task<User> GetSigleUser(string userName)
+        {
+            
+            try
+            {
+                var user = await _dataContext.Users.FirstOrDefaultAsync(u => u.Email == userName);
+                return user;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+           
         }
     }
 }
