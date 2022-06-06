@@ -26,7 +26,7 @@ namespace VacinneRegister.API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> RegisterVacinne(PersonDTO personDTO)
+        public async Task<IActionResult> RegisterPersonWithVacinne(PersonDTO personDTO)
         {
             var person = _mapper.Map<Person>(personDTO);
 

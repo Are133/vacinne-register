@@ -42,26 +42,6 @@ namespace VacinnerRegister.Infraestructure.Repositories
                           Text = v.Name
 
                       }).ToListAsync();
-
-            //lista = (from d in db.Animals
-            //         where d.Id_Clase == idAnimalClass
-            //         select new ElementJsonIntKey
-            //         {
-            //             Value = d.Id,
-            //             Text = d.Name
-            //         }).ToList();
-
-
-            //var vp = (from vaccines in _dataContext.Vacinnes
-            //        join munipalities in _dataContext.Municipalities on
-            //        vaccines.Id equals munipalities.Id
-            //        select new MunicipalityAndVacines
-            //        {
-            //            Value = vaccines.Id,
-            //            Text = vaccines.Name
-
-            //        }).ToListAsync();
-            Console.WriteLine(vp);
             return await vp;
             
         }
