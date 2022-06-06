@@ -42,6 +42,7 @@ namespace VacinneRegister.API
             {
                 conf.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
             });
+            services.AddTransient<IPersonRepository, PersonRepository>();
             services.AddTransient<IMunicipalityRepository, MunicipalityRepository>();
             services.AddTransient<IVacinneRepository, VacinneRepository>();
             services.AddTransient<IUserRepository, UserRepository>();

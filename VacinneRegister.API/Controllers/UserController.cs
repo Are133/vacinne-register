@@ -55,6 +55,7 @@ namespace VacinneRegister.API.Controllers
         public async Task<IActionResult> Login(UserDTo user)
         {
             var response = await _userRepository.Login(user.Email, user.Password);
+            var userLogued = await _userRepository.GetSigleUser(user.Email);
 
             if (response == "nuser")
             {
@@ -65,7 +66,21 @@ namespace VacinneRegister.API.Controllers
                 return BadRequest("CredentialsIncorrect");
             }
 
-            return Ok($"Usuario Logueado {response}");
+            UserLogue responseNew = new UserLogue
+            {
+                Token = response,
+                User = userLogued,
+            };
+
+            return Ok(responseNew);
+        }
+
+
+        public class UserLogue
+        {
+            public string Token;
+
+            public User User { get; set; }
         }
     }
 }

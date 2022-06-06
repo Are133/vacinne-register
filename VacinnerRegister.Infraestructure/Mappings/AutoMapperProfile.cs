@@ -14,6 +14,8 @@ namespace VacinnerRegister.Infraestructure.Mappings
             CreateMap<VacinneDTo, Vacinne>();
             CreateMap<Municipality, MunicipalityDTo>();
             CreateMap<MunicipalityDTo, Municipality>();
+            CreateMap<Person, PersonDTO>();
+            CreateMap<PersonDTO, Person>();
         }
     }
 }

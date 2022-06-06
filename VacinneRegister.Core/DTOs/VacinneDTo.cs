@@ -8,5 +8,7 @@ namespace VacinneRegister.Core.DTOs
         public string Name { get; set; }
 
         public DateTime ApplicationDate { get; set; }
+
+        public int MunicipalityId { get; set; }
     }
 }

@@ -10,6 +10,7 @@ namespace VacinneRegister.Core.Interfaces
         Task<string> Login(string userName, string password);
         Task<bool> UserExist(string userName);
 
+        Task<User> GetSigleUser(string userName);
         Task<IEnumerable<User>> GetUsers();
 
         string GenerateKeyUser();
