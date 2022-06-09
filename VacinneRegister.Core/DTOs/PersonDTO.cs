@@ -9,7 +9,7 @@ namespace VacinneRegister.Core.DTOs
     {
         public string Name { get; set; }
 
-        public string LstName { get; set; }
+        public string LastNames { get; set; }
 
         public string CURP { get; set; }
 
