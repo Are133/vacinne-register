@@ -48,6 +48,7 @@ namespace VacinnerRegister.Infraestructure.Repositories
                 ApplicationDate = vacinne.ApplicationDate,
                 MunicipalityId = vacinne.MunicipalityId
             };
+            await _dataContext.AddAsync(vacinne);
             await _dataContext.SaveChangesAsync();
             return vacinneToDB;
         }
