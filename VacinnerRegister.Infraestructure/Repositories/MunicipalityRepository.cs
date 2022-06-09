@@ -43,12 +43,13 @@ namespace VacinnerRegister.Infraestructure.Repositories
         public async Task<Municipality> RegisterMunicipality(Municipality municipality)
         {
             await _dataContext.AddAsync(municipality);
-            Municipality vacinneToDB = new Municipality
+            Municipality municipalityDTO = new Municipality
             {
                 Name = municipality.Name,
             };
+            await _dataContext.AddAsync(municipality);
             await _dataContext.SaveChangesAsync();
-            return vacinneToDB;
+            return municipalityDTO;
         }
         public async Task<bool> UpdateMunicipality(Municipality municipality)
         {
