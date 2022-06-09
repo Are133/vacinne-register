@@ -28,6 +28,7 @@ namespace VacinnerRegister.Infraestructure.Repositories
                 IdMunicipality = person.IdMunicipality,
                 IdVacinne = person.IdVacinne
             };
+            await _dataContext.AddAsync(person);
             await _dataContext.SaveChangesAsync();
             return personToDB;
         }
